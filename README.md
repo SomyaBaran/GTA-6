@@ -1,7 +1,7 @@
 # 🎮 GTA 6 Clone
 
 ## 🚀 Live Demo  
-👉 [https://gta-6cln.netlify.app](https://gta-6cln.netlify.app)
+👉 [https://gta-6cln.netlify.app](https://gta-6-clone.netlify.app/)
 
 ---
 

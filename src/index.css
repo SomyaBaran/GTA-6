@@ -10,3 +10,7 @@ html,body{
     font-family: 'Pricedown', sans-serif;
     background-color: #000;
 }
+::selection {
+  background-color: rgb(250, 123, 144);
+  color: white; 
+}

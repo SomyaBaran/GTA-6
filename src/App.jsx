@@ -7,30 +7,29 @@ function App() {
 
   // React state to control content visibility
   let [showContent, setShowContent] = useState(false);
-      useGSAP(function(){ //GSAP timeline animation
-
+      useGSAP(function(){
         //Create a GSAP timeline for chaining multiple animations
         const tl = gsap.timeline();
 
         tl.to(".vi-mask-group", {
           rotate: 30,
           duration: 2,
-          ease: "Power4.easeInOut", // Smooth dramatic easing
-          transformOrigin: "50% 50%" // Rotate from center
+          ease: "Power4.easeInOut", 
+          transformOrigin: "50% 50%" 
         })
         .to(".vi-mask-group",{
           scale: 10,
           duration: 2,
-          delay: -1.8, // Start before previous animation ends
-          ease: "Expo.easeInOut", // Smooth, fast middle easing
+          delay: -1.8, 
+          ease: "Expo.easeInOut", 
           transformOrigin: "50% 50%",
-          opacity: 0, //Fade out completely
+          opacity: 0, 
 
           onUpdate: function(){
-            if(this.progress() >= 0.9){ // Check if animation is 90% complete
+            if(this.progress() >= 0.9){
               document.querySelector(".svg").remove();
               setShowContent(true);
-              this.kill(); //Kill the timeline to stop further updates
+              this.kill(); 
             }
           }
         })
@@ -192,6 +191,7 @@ function App() {
 
 
         {/* // PAGE - 05  */}
+          
         <div className="w-full h-screen flex items-center justify-center bg-black text-white text-9xl">
         <h2 className="
              text-9xl font-bold
